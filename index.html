@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLURBANK.SYS | NETWORK TERMINAL</title>
+    <style>
+        /* BASE SYSTEM STYLES */
+        body {
+            background-color: #C0C0C0; /* Classic System Gray */
+            font-family: "Courier New", Courier, monospace;
+            color: #000;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #network-terminal {
+            width: 100%;
+            max-width: 900px;
+            border: 2px solid #000;
+            background-color: #C0C0C0;
+            box-shadow: 4px 4px 0px #808080;
+        }
+
+        /* TOP BAR & NAV */
+        header {
+            border-bottom: 2px solid #000;
+            padding: 10px;
+        }
+
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0000FF; /* Classic Link Blue */
+            font-weight: bold;
+            padding-right: 15px;
+        }
+
+        nav a:hover {
+            background: #000;
+            color: #FFF;
+        }
+
+        /* GRID LAYOUT */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            border: 2px inset #FFF; /* Creates the "sunken" terminal look */
+            background: #D3D3D3;
+            padding: 15px;
+            position: relative;
+        }
+
+        .box-title {
+            position: absolute;
+            top: -12px;
+            left: 10px;
+            background: #C0C0C0;
+            padding: 0 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        /* FLOATING CENTER TICKER */
+        .center-ticker {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            background: #000;
+            color: #00FF00; /* Neon Matrix Green */
+            padding: 10px 0;
+            border-top: 2px solid #808080;
+            border-bottom: 2px solid #808080;
+            z-index: 9999;
+            pointer-events: none; /* Allows clicking through to content */
+        }
+
+        marquee {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* PRODUCT TILES */
+        .product-flex {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .product-item {
+            border: 1px solid #000;
+            background: #FFF;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8em;
+            width: 100px;
+        }
+
+        .placeholder-img {
+            width: 80px;
+            height: 80px;
+            background: #808080;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 180px;
+            background: #000;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.7em;
+        }
+
+        footer {
+            border-top: 2px solid #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+<div id="network-terminal">
+    <header>
+        <div class="title-bar">
+            <span>[ B L U R B A N K . S Y S ]</span>
+            <span>[ _ ] [ □ ] [ X ]</span>
+        </div>
+        <nav>
+            <a href="#">HOME</a> | <a href="#">SHOP</a> | <a href="#">TRANSMISSIONS</a> | <a href="#">THE_MANIFESTO.PDF</a>
+        </nav>
+    </header>
+
+    <div class="grid-container">
+        <div class="box">
+            <span class="box-title">[ THE BULLETIN ]</span>
+            <p>> NEW TRANSMISSION:<br>&nbsp;&nbsp;"Point Break & The<br>&nbsp;&nbsp;Death of the Ego"</p>
+            <p>> DROP 01: MUSHROOM<br>&nbsp;&nbsp;COLLECTION IS LIVE</p>
+            <p><a href="#">[VIEW ARCHIVE]</a></p>
+        </div>
+
+        <div class="box">
+            <span class="box-title">[ FEATURED TRANSMISSION ]</span>
+            <div class="video-placeholder">
+                [ TRIPPIN_STUDY_01 ]<br>
+                (Silent Looping iPhone Video)
+            </div>
+            <p style="font-size: 0.7em; margin-top: 10px;">TYPE: VIDEO_FILE // SIZE: 4.2MB</p>
+        </div>
+
+        <div class="box">
+            <span class="box-title">[ THE LOGIC ]</span>
+            <p style="text-align: center;">"A T-shirt can be<br>a transmission."</p>
+            <p style="text-align: center; font-size: 2em;">🍄</p>
+            <p style="text-align: center; font-size: 0.8em;">(Trippin' Icon GIF)</p>
+        </div>
+
+        <div class="box">
+            <span class="box-title">[ THE GOODS ]</span>
+            <div class="product-flex">
+                <div class="product-item">
+                    <div class="placeholder-img"></div>
+                    TEE_001<br>$38.00
+                </div>
+                <div class="product-item">
+                    <div class="placeholder-img"></div>
+                    HOOD_001<br>$65.00
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 15px;"><a href="#">[ ACCESS ALL INVENTORY ]</a></p>
+        </div>
+    </div>
+
+    <footer>
+        [NETWORK_ID: 00451-BBNK] - ACCESS GRANTED
+    </footer>
+</div>
+
+<div class="center-ticker">
+    <marquee scrollamount="8">
+        R&R STATUS: ACTIVE // $420 REDIRECTED TO PSYCHEDELIC RESEARCH // GIVE A.F. // LOVE IS THE DRUG // LAUGHTER IS RESISTANCE // 
+    </marquee>
+</div>
+
+</body>
+</html>
